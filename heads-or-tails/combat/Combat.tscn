@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://t7orhjpryc3w"]
+
+[ext_resource type="Texture2D" uid="uid://cbnwivflvonhh" path="res://resource/UI/战斗UI.jpg" id="1_ityr7"]
+
+[node name="Combat" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.74138474, 0.7413847, 0.74138457, 1)
+scale = Vector2(1.0099938, 1.0092592)
+texture = ExtResource("1_ityr7")
+centered = false
+metadata/_edit_lock_ = true
