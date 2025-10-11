@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://chaabjf0b67yo"]
+
+[sub_resource type="Curve" id="Curve_j42f0"]
+_data = [Vector2(0.051020406, 0.37078655), 0.0, 0.0, 0, 0, Vector2(0.7908163, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.6741574), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="CardArc" type="Line2D"]
+position = Vector2(76, 21)
+scale = Vector2(0.8581254, 0.84935397)
+width = 20.0
+width_curve = SubResource("Curve_j42f0")

@@ -15,6 +15,10 @@ run/main_scene="uid://cmjf3bi6bkh6x"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Events="*res://global/events.gd"
+
 [input]
 
 left_mouse={
@@ -32,3 +36,4 @@ right_mouse={
 
 2d_physics/layer_1="card_target_selector"
 2d_physics/layer_2="card_drop_area"
+2d_physics/layer_3="enemies"
