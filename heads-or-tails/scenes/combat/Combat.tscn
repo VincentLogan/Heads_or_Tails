@@ -1,41 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://t7orhjpryc3w"]
+[gd_scene load_steps=12 format=3 uid="uid://t7orhjpryc3w"]
 
 [ext_resource type="Texture2D" uid="uid://cbnwivflvonhh" path="res://resource/UI/战斗UI.jpg" id="1_gxktx"]
 [ext_resource type="PackedScene" uid="uid://cmjf3bi6bkh6x" path="res://scenes/card_ui/card_ui.tscn" id="2_g5y84"]
 [ext_resource type="Script" uid="uid://da0bjojtxdaei" path="res://scenes/ui/hand.gd" id="2_wm0o0"]
+[ext_resource type="PackedScene" uid="uid://d14w5udat36un" path="res://scenes/enemy/enemy.tscn" id="2_x5flq"]
+[ext_resource type="Resource" uid="uid://tnwvqqwpg05r" path="res://enemies/carb/test_enemy.tres" id="3_bc6rn"]
 [ext_resource type="Resource" uid="uid://d4ml05fcgx74v" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="4_x5flq"]
 [ext_resource type="Resource" uid="uid://0hrjaq6dmj1n" path="res://characters/warrior/cards/warrior_block.tres" id="5_bc6rn"]
+[ext_resource type="PackedScene" uid="uid://psre23o0n2il" path="res://scenes/player/player.tscn" id="6_7umwq"]
 [ext_resource type="PackedScene" uid="uid://b2jrrwffl1w5u" path="res://scenes/card_target_selector/card_target_selector.tscn" id="6_bc6rn"]
-[ext_resource type="Texture2D" uid="uid://sfuc054rcoip" path="res://art/小兵待机动画1.png" id="6_mhcl8"]
-[ext_resource type="Texture2D" uid="uid://d0m84j5u0xdad" path="res://art/小兵待机动画2.png" id="7_7umwq"]
-[ext_resource type="Texture2D" uid="uid://c2wq2476dhvru" path="res://art/小兵待机动画3.png" id="8_jny6y"]
-[ext_resource type="Texture2D" uid="uid://cbo2bi5n454y1" path="res://art/小兵待机动画4.png" id="9_7ugeg"]
+[ext_resource type="Resource" uid="uid://bsr0jaf8p6k2x" path="res://characters/warrior/warrior.tres" id="7_jny6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5y84"]
 size = Vector2(1138.6208, 487.48624)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_a2a05"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_mhcl8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_7umwq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_jny6y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_7ugeg")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pey"]
-size = Vector2(668, 40.565224)
 
 [node name="Combat" type="Node2D"]
 metadata/_edit_lock_ = true
@@ -57,20 +34,14 @@ metadata/_edit_lock_ = true
 position = Vector2(570.30066, 244.73401)
 shape = SubResource("RectangleShape2D_g5y84")
 
-[node name="Enemy" type="Area2D" parent="."]
-position = Vector2(684, 311)
-scale = Vector2(0.29042235, 0.2616086)
-collision_layer = 4
+[node name="Enemy" parent="." instance=ExtResource("2_x5flq")]
+position = Vector2(960.00006, 360)
+scale = Vector2(0.83037853, 0.75891304)
+stats = ExtResource("3_bc6rn")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
-position = Vector2(1072, -287)
-sprite_frames = SubResource("SpriteFrames_a2a05")
-autoplay = "default"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
-position = Vector2(952, -327.50003)
-scale = Vector2(1, 22.999998)
-shape = SubResource("RectangleShape2D_e3pey")
+[node name="Player" parent="." instance=ExtResource("6_7umwq")]
+position = Vector2(282, 337)
+stats = ExtResource("7_jny6y")
 
 [node name="CardTargetSelector" parent="." instance=ExtResource("6_bc6rn")]
 
