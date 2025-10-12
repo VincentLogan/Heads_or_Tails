@@ -42,17 +42,17 @@ scale = Vector2(0.42552057, 0.42055497)
 sprite_frames = SubResource("SpriteFrames_a2a05")
 autoplay = "default"
 
-[node name="Arrow" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1422.0668, -332.55783)
-rotation = 1.5707964
-scale = Vector2(18.679949, 18.401106)
-texture = ExtResource("5_cwlon")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-22.058517, -196.018)
 scale = Vector2(1, 22.999998)
 shape = SubResource("RectangleShape2D_e3pey")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(141.1737, -172.01268)
+rotation = 1.5707964
+scale = Vector2(6.59059, 7.059683)
+texture = ExtResource("5_cwlon")
 
 [node name="StatsUI" parent="." instance=ExtResource("6_nbhyu")]
 offset_left = -179.04956
@@ -60,3 +60,6 @@ offset_top = 7.6450086
 offset_right = 180.95044
 offset_bottom = 71.645004
 theme_override_constants/separation = 4
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

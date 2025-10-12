@@ -23,6 +23,12 @@ Events="*res://global/events.gd"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+enemies=""
+player=""
+ui_layer=""
+
 [input]
 
 left_mouse={

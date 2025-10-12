@@ -27,7 +27,7 @@ func update_enemy() -> void:
 		await  ready
 		
 	#animated_sprite_2d.texture = stats.art
-	arrow.position = Vector2.RIGHT * (animated_sprite_2d.get_viewport_rect().size.x / 2 + ARROW_OFFSET)
+	#arrow.position = Vector2.RIGHT * (animated_sprite_2d.get_viewport_rect().size.x / 2 + ARROW_OFFSET)
 	update_stats()
 	
 func take_damage(damage: int) -> void:
@@ -38,3 +38,11 @@ func take_damage(damage: int) -> void:
 	
 	if stats.health <= 0:
 		queue_free()
+
+
+func _on_area_entered(_area: Area2D) -> void:
+	arrow.show()
+
+
+func _on_area_exited(_area: Area2D) -> void:
+	arrow.hide()
