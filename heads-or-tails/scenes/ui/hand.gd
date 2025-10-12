@@ -7,14 +7,9 @@ var cards_played_this_turn := 0
 
 func _ready() -> void:
 	Events.card_played.connect(_on_card_played)
-	
-	for child in get_children():
-		var card_ui := child as CardUI
-		card_ui.parent = self
-		card_ui.reparent_requested.connect(_on_card_ui_reparent_requested)这四排要被删掉
 
 func add_card(card: Card) -> void:
-	var new_card_ui := CARD_UI_SCENE.instantiate() as CardUI
+	var new_card_ui := card_ui.instantiate()
 	add_child(new_card_ui)
 	new_card_ui.reparent_requested.connect(_on_card_ui_reparent_requested)
 	new_card_ui.card = card
@@ -26,11 +21,11 @@ func discard_card(card: CardUI) -> void:
 
 
 func disable_hand() -> void:
-	for card: CardUI in get_children():
+	for card in get_children():
 		card.disabled = true
 
 func _on_card_played(_card: Card) -> void:
-	cards_played_this_turn += 1应该是第五集加的
+	cards_played_this_turn += 1
 
 func _on_card_ui_reparent_requested(child: CardUI) -> void:
 	child.disabled = true
