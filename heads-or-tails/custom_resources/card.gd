@@ -24,11 +24,11 @@ func _get_targets(targets: Array[Node]) -> Array[Node]:
 
 	match target:
 		Target.SELF:
-			return tree.get_nodes_in_group("Player")
+			return tree.get_nodes_in_group("player")
 		Target.ALL_ENEMIES:
 			return tree.get_nodes_in_group("enemies")
 		Target.EVERYONE:
-			return tree.get_nodes_in_group("Player") + tree.get_nodes_in_group("enemies")
+			return tree.get_nodes_in_group("player") + tree.get_nodes_in_group("enemies")
 		_:
 			return []
 			
