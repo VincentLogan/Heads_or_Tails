@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://te1ri0jo51fy"]
+
+[ext_resource type="Texture2D" uid="uid://css3q0wnwu4tv" path="res://art/gold.png" id="1_32qc5"]
+
+[node name="LuckycoinUI" type="Panel"]
+offset_right = 120.0
+offset_bottom = 120.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(58.499996, 60.000008)
+scale = Vector2(5.7499995, 5.5000005)
+texture = ExtResource("1_32qc5")
+
+[node name="LuckycoinLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 131.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 28
+text = "50%"
+horizontal_alignment = 1
+vertical_alignment = 1

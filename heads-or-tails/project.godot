@@ -29,6 +29,10 @@ enemies=""
 player=""
 ui_layer=""
 
+[gui]
+
+theme/custom="uid://cpfc6jmkfb6ku"
+
 [input]
 
 left_mouse={

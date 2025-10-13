@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d14w5udat36un"]
+[gd_scene load_steps=7 format=3 uid="uid://d14w5udat36un"]
 
 [ext_resource type="Script" uid="uid://clll7m17fmfca" path="res://scenes/enemy/enemy.gd" id="1_nbhyu"]
 [ext_resource type="Texture2D" uid="uid://sfuc054rcoip" path="res://art/小兵待机动画1.png" id="1_tjssy"]
 [ext_resource type="Texture2D" uid="uid://3qeojwhvlypk" path="res://art/arrow.png" id="5_cwlon"]
+[ext_resource type="PackedScene" uid="uid://nptnoye060vm" path="res://scenes/ui/intent_ui.tscn" id="5_gl05p"]
 [ext_resource type="PackedScene" uid="uid://cyqnt2tydaiv8" path="res://scenes/ui/stats_ui.tscn" id="6_nbhyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pey"]
@@ -36,6 +37,12 @@ offset_top = 7.6450086
 offset_right = 180.95044
 offset_bottom = 71.645004
 theme_override_constants/separation = 4
+
+[node name="IntentUI" parent="." instance=ExtResource("5_gl05p")]
+offset_left = -79.19501
+offset_top = -451.0555
+offset_right = 80.80499
+offset_bottom = -387.0555
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
