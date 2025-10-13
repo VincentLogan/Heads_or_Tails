@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dqs55m4wbi3d6" path="res://scenes/combat/battle.gd" id="1_jny6y"]
 [ext_resource type="Script" uid="uid://da0bjojtxdaei" path="res://scenes/ui/hand.gd" id="2_wm0o0"]
 [ext_resource type="PackedScene" uid="uid://d14w5udat36un" path="res://scenes/enemy/enemy.tscn" id="2_x5flq"]
-[ext_resource type="Resource" uid="uid://tnwvqqwpg05r" path="res://enemies/carb/test_enemy.tres" id="3_bc6rn"]
+[ext_resource type="Resource" uid="uid://balohvyalx16c" path="res://enemies/carb/carb_enemy.tres" id="5_jny6y"]
 [ext_resource type="PackedScene" uid="uid://psre23o0n2il" path="res://scenes/player/player.tscn" id="6_7umwq"]
 [ext_resource type="PackedScene" uid="uid://b2jrrwffl1w5u" path="res://scenes/card_target_selector/card_target_selector.tscn" id="6_bc6rn"]
 [ext_resource type="Script" uid="uid://ynxhauege180" path="res://scenes/ui/battle_ui.gd" id="7_7umwq"]
@@ -42,7 +42,7 @@ shape = SubResource("RectangleShape2D_g5y84")
 [node name="Enemy" parent="." instance=ExtResource("2_x5flq")]
 position = Vector2(946.00006, 397)
 scale = Vector2(0.83037853, 0.75891304)
-stats = ExtResource("3_bc6rn")
+stats = ExtResource("5_jny6y")
 
 [node name="Player" parent="." instance=ExtResource("6_7umwq")]
 position = Vector2(282, 337)
