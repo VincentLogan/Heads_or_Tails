@@ -16,3 +16,4 @@ signal player_turn_ended
 
 #敌人相关的事件
 signal enemy_action_completed(enemy: Enemy)
+signal enemy_turn_ended

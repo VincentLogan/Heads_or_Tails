@@ -5,7 +5,7 @@ const ARROW_OFFSET := 5
 
 @export var stats: EnemyStats : set = set_enemy_stats
 
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var arrow: Sprite2D = $Arrow
 @onready var stats_ui: StatsUI = $StatsUI
 
@@ -28,7 +28,7 @@ func setup_ai() -> void:
 	if enemy_action_picker:
 		enemy_action_picker.queue_free()
 	
-	var new_action_picker: EnetyActionPicker = stats.ai.instantiate()
+	var new_action_picker: EnemyActionPicker = stats.ai.instantiate()
 	add_child(new_action_picker)
 	enemy_action_picker = new_action_picker
 	enemy_action_picker.enemy = self
@@ -54,8 +54,8 @@ func update_enemy() -> void:
 	if not is_inside_tree():
 		await  ready
 		
-	animated_sprite_2d.texture = stats.art
-	arrow.position = Vector2.RIGHT * (animated_sprite_2d.get_viewport_rect().size.x / 2 + ARROW_OFFSET)
+	sprite_2d.texture = stats.art
+	arrow.position = Vector2.RIGHT * (sprite_2d.get_viewport_rect().size.x / 2 + ARROW_OFFSET)
 	setup_ai()
 	update_stats()
 

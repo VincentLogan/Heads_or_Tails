@@ -47,7 +47,7 @@ func get_chance_based_action() -> EnemyAction:#执行基于概率的行动
 func setup_chances() -> void:
 	var action: EnemyAction
 	
-	for child in get_action():
+	for child in get_children():
 		action = child as EnemyAction
 		if not action or action.type != EnemyAction.Type.CHANCE_BASED:#如果不是有效行动或者不是基于概率的行动
 			continue

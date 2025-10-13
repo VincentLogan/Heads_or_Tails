@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://t7orhjpryc3w"]
+[gd_scene load_steps=16 format=3 uid="uid://t7orhjpryc3w"]
 
 [ext_resource type="Texture2D" uid="uid://cbnwivflvonhh" path="res://resource/UI/战斗UI.jpg" id="1_gxktx"]
 [ext_resource type="Script" uid="uid://dqs55m4wbi3d6" path="res://scenes/combat/battle.gd" id="1_jny6y"]
 [ext_resource type="Script" uid="uid://da0bjojtxdaei" path="res://scenes/ui/hand.gd" id="2_wm0o0"]
 [ext_resource type="PackedScene" uid="uid://d14w5udat36un" path="res://scenes/enemy/enemy.tscn" id="2_x5flq"]
+[ext_resource type="Script" uid="uid://dy7a7o7wmfefs" path="res://scenes/enemy/enemy_handle.gd" id="4_7ugeg"]
 [ext_resource type="Resource" uid="uid://balohvyalx16c" path="res://enemies/carb/carb_enemy.tres" id="5_jny6y"]
 [ext_resource type="PackedScene" uid="uid://psre23o0n2il" path="res://scenes/player/player.tscn" id="6_7umwq"]
 [ext_resource type="PackedScene" uid="uid://b2jrrwffl1w5u" path="res://scenes/card_target_selector/card_target_selector.tscn" id="6_bc6rn"]
@@ -39,7 +40,10 @@ metadata/_edit_lock_ = true
 position = Vector2(570.30066, 217.98172)
 shape = SubResource("RectangleShape2D_g5y84")
 
-[node name="Enemy" parent="." instance=ExtResource("2_x5flq")]
+[node name="EnemyHandle" type="Node2D" parent="."]
+script = ExtResource("4_7ugeg")
+
+[node name="Enemy" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
 position = Vector2(946.00006, 397)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("5_jny6y")
