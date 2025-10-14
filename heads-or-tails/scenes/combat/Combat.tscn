@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://t7orhjpryc3w"]
+[gd_scene load_steps=18 format=3 uid="uid://t7orhjpryc3w"]
 
 [ext_resource type="Script" uid="uid://dqs55m4wbi3d6" path="res://scenes/combat/battle.gd" id="1_jny6y"]
 [ext_resource type="Script" uid="uid://da0bjojtxdaei" path="res://scenes/ui/hand.gd" id="2_wm0o0"]
@@ -15,6 +15,7 @@
 [ext_resource type="Theme" uid="uid://cpfc6jmkfb6ku" path="res://main_theme.tres" id="12_jny6y"]
 [ext_resource type="PackedScene" uid="uid://3gwhokaj47t1" path="res://scenes/ui/mana_ui.tscn" id="15_a2a05"]
 [ext_resource type="PackedScene" uid="uid://te1ri0jo51fy" path="res://scenes/ui/luckycoin_ui.tscn" id="15_e3pey"]
+[ext_resource type="Script" uid="uid://brdvmtks2ufs8" path="res://scenes/ui/red_flash.gd" id="16_e3pey"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5y84"]
 size = Vector2(1138.6208, 433.9816)
@@ -107,3 +108,20 @@ offset_left = 46.0
 offset_top = 31.0
 offset_right = 166.0
 offset_bottom = 151.0
+
+[node name="RedFlash" type="CanvasLayer" parent="."]
+layer = 2
+script = ExtResource("16_e3pey")
+
+[node name="ColorRect" type="ColorRect" parent="RedFlash"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0.44313726, 0.44313726, 0.10980392)
+
+[node name="Timer" type="Timer" parent="RedFlash"]
+wait_time = 0.1
+one_shot = true
