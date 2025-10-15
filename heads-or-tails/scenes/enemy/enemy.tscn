@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqnt2tydaiv8" path="res://scenes/ui/stats_ui.tscn" id="6_nbhyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pey"]
-size = Vector2(326.46445, 17.191303)
+size = Vector2(168.71979, 17.689888)
 
 [node name="Enemy" type="Area2D" groups=["enemies"]]
 scale = Vector2(0.29042235, 0.2616086)
@@ -20,7 +20,7 @@ scale = Vector2(0.42, 0.42)
 texture = ExtResource("1_tjssy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-22.058517, -196.018)
+position = Vector2(5.1648917, -201.75175)
 scale = Vector2(1, 22.999998)
 shape = SubResource("RectangleShape2D_e3pey")
 

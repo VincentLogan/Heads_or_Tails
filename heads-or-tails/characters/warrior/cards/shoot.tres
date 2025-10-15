@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://himnkepog6oe"]
+
+[ext_resource type="Texture2D" uid="uid://dojlh80rte165" path="res://art/art/tile_0107.png" id="1_0csu1"]
+[ext_resource type="AudioStream" uid="uid://b1vpjjmi5cj3n" path="res://art/art/axe.ogg" id="2_7bkbg"]
+[ext_resource type="Script" uid="uid://dxyugswmd8abl" path="res://characters/warrior/cards/shoot.gd" id="2_yvn0p"]
+
+[resource]
+script = ExtResource("2_yvn0p")
+id = "shoot"
+target = 1
+cost = 1
+icon = ExtResource("1_0csu1")
+tooltip_text = "cause 4 damage and mark the enemy
+ "
+sound = ExtResource("2_7bkbg")
+metadata/_custom_type_script = "uid://co1d38d8umks"
