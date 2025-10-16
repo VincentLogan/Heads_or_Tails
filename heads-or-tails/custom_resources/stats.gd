@@ -2,12 +2,13 @@ class_name  Stats
 extends Resource
 
 signal stats_changed
+signal luck_coin_changed(value:int)
 
 @export var max_health := 1
 @export var art: Texture
-
 var health: int : set = set_health
 var block: int : set = set_block
+@export var luck_coin := 0 : set = set_luck_coin
 
 func set_health(value : int) -> void:
 	health = clampi(value, 0, max_health)#限制value在0和最大生命值之间
@@ -17,6 +18,11 @@ func set_block(value : int) -> void:
 	block = clampi(value , 0, 999)
 	stats_changed.emit()
 
+func set_luck_coin(value: int) -> void:
+	luck_coin = clamp(value, -10, 10)
+	luck_coin_changed.emit(luck_coin)
+	
+	
 func take_damage(damage : int) -> void:#这里的damage是敌人造成的伤害
 	if damage <= 0:
 		return
