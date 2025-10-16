@@ -4,23 +4,18 @@ extends Stats
 @export var starting_deck: CardPile #起始牌堆
 @export var cards_per_turn: int #每回合牌数
 @export var max_mana: int #最大法力值
-@export var luck_coin: int = 0#幸运币
 
 var mana: int : set = set_mana
 var deck: CardPile
 var discard: CardPile
 var draw_pile: CardPile
+var luck_coins: int = 0
+var high_luck_threshold: int = 5
+var low_luck_threshold: int = -5
 
-func set_luck(value:int) -> void:
-	luck_coin = value
-
-func add_luck(delta:int) -> void:
-	set_luck(luck_coin + delta)
-	
 func set_mana(value: int) -> void:
 	mana = value
 	stats_changed.emit()
-
 
 func reset_mana() -> void:
 	self.mana = max_mana

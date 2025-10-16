@@ -16,9 +16,6 @@ signal player_turn_ended
 signal player_hit
 signal player_died
 
-#幸运币的信号
-signal luck_changed(new_luck: int)
-
 #敌人相关的事件
 signal enemy_action_completed(enemy: Enemy)
 signal enemy_turn_ended
