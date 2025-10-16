@@ -34,4 +34,9 @@ func create_instance() -> Resource:
 	instance.deck = instance.starting_deck.duplicate()
 	instance.draw_pile = CardPile.new()
 	instance.discard = CardPile.new()
+	
+	#初始化幸运币，战斗开始重置
+	#instance.luck_coin = 0
+	#或者设置为默认值
+	instance.luck_coin = instance.luck_coin_default
 	return instance
