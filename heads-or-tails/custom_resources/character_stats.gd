@@ -4,6 +4,7 @@ extends Stats
 @export var starting_deck: CardPile #起始牌堆
 @export var cards_per_turn: int #每回合牌数
 @export var max_mana: int #最大法力值
+@export var luck_coin: int = 0
 
 var mana: int : set = set_mana
 var deck: CardPile

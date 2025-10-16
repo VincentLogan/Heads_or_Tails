@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://cjn6ak7kmmnte"]
+
+[ext_resource type="Script" uid="uid://bxgtm7mqe38sy" path="res://custom_resources/effect.gd" id="1_4lsjx"]
+
+[resource]
+script = ExtResource("1_4lsjx")
+effect_type = "luck_gain"
+value = 5
+metadata/_custom_type_script = "uid://bxgtm7mqe38sy"
