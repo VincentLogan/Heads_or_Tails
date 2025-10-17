@@ -49,19 +49,14 @@ shape = SubResource("RectangleShape2D_g5y84")
 script = ExtResource("4_7ugeg")
 
 [node name="Bat2" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(1060, 390)
+position = Vector2(727.00006, 420.00003)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("8_ps2h3")
 
 [node name="Crab" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(886.00006, 457)
+position = Vector2(924.00006, 417.00003)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("5_jny6y")
-
-[node name="Bat1" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(714.00006, 394.00003)
-scale = Vector2(0.83037853, 0.75891304)
-stats = ExtResource("8_ps2h3")
 
 [node name="Player" parent="." instance=ExtResource("6_7umwq")]
 position = Vector2(262, 345)
