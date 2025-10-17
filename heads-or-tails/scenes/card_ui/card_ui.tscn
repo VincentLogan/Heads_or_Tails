@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b1e4docwy6kf5" path="res://scenes/card_ui/card_ui.gd" id="2_els2s"]
 [ext_resource type="StyleBox" uid="uid://dt0o3bfn4bshp" path="res://scenes/card_ui/card_dragging_styleboxi.tres" id="3_js3ux"]
 [ext_resource type="Script" uid="uid://4yjomeu5eku6" path="res://scenes/card_ui/card_state_machine.gd" id="3_psaan"]
-[ext_resource type="Texture2D" uid="uid://71bjvpeweqfr" path="res://art/card_ui.jpg" id="4_opj8w"]
+[ext_resource type="Texture2D" uid="uid://dfyp4lgbc5i7a" path="res://art/attack.png" id="4_opj8w"]
 [ext_resource type="Script" uid="uid://bio5fj4nlq4r4" path="res://scenes/card_ui/card_states/card_base_state.gd" id="4_orrkt"]
 [ext_resource type="Texture2D" uid="uid://dyhml6v2ch0aw" path="res://resource/sprites/attack.jpg" id="4_qeblu"]
 [ext_resource type="Script" uid="uid://cmv2u475m87xm" path="res://scenes/card_ui/card_states/card_clicked_state.gd" id="5_yxx8x"]
@@ -41,7 +41,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("3_js3ux")
 
-[node name="card" type="TextureRect" parent="."]
+[node name="card_value" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -90,22 +90,6 @@ offset_bottom = 33.973686
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 18
 text = "2"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="card_name" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -13.521837
-offset_top = -45.807022
-offset_right = 4.478163
-offset_bottom = 7.192978
-grow_vertical = 2
-theme_override_font_sizes/font_size = 18
-text = "劈
-砍"
 horizontal_alignment = 1
 vertical_alignment = 1
 
