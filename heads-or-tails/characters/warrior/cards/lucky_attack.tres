@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dxka4y2medxxv"]
+
+[ext_resource type="Texture2D" uid="uid://baajgfpdfwugq" path="res://art/lucky_attack.png" id="1_4eblc"]
+[ext_resource type="Script" uid="uid://qawcenp66g6q" path="res://characters/warrior/cards/lucky_attack.gd" id="2_58lm2"]
+
+[resource]
+script = ExtResource("2_58lm2")
+id = "lucky_attack"
+target = 1
+cost = 2
+icon = ExtResource("1_4eblc")
+tooltip_text = "将超出50%的幸运币能量转换成伤害打出"
+metadata/_custom_type_script = "uid://co1d38d8umks"

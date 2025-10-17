@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bqd5tejli51an"]
+
+[ext_resource type="Texture2D" uid="uid://cxi3pcg5y24fw" path="res://art/keep_lucky.png" id="1_13elt"]
+[ext_resource type="Script" uid="uid://iiveq5cmay4y" path="res://characters/warrior/cards/keep_lucky.gd" id="2_atb8u"]
+
+[resource]
+script = ExtResource("2_atb8u")
+id = "keep_lucky"
+type = 2
+cost = 1
+icon = ExtResource("1_13elt")
+tooltip_text = "在接下来的一回合内幸运币能量不变"
+metadata/_custom_type_script = "uid://co1d38d8umks"

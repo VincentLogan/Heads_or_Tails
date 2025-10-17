@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfyp4lgbc5i7a"
-path="res://.godot/imported/attack.png-80f039ac7006183877e433ccac299122.ctex"
+uid="uid://btctq2xf7mehn"
+path="res://.godot/imported/shield_charge.png-b3407f5b1ec7a59947d4bac7aed15ade.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/attack.png"
-dest_files=["res://.godot/imported/attack.png-80f039ac7006183877e433ccac299122.ctex"]
+source_file="res://art/shield_charge.png"
+dest_files=["res://.godot/imported/shield_charge.png-b3407f5b1ec7a59947d4bac7aed15ade.ctex"]
 
 [params]
 

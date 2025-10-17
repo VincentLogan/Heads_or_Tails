@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://r2jc4fmlynf2"]
+
+[ext_resource type="Texture2D" uid="uid://c3jd3c2aggu5x" path="res://art/so_lucky.png" id="1_bq70n"]
+[ext_resource type="Script" uid="uid://q5p4j8gdo12w" path="res://characters/warrior/cards/so_lucky.gd" id="2_sr4la"]
+
+[resource]
+script = ExtResource("2_sr4la")
+id = "so_lucky"
+type = 2
+cost = 1
+icon = ExtResource("1_bq70n")
+tooltip_text = "获得20%幸运币能量"
+metadata/_custom_type_script = "uid://co1d38d8umks"
