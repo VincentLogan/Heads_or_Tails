@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqnt2tydaiv8" path="res://scenes/ui/stats_ui.tscn" id="6_nbhyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pey"]
-size = Vector2(132.56555, 10.968927)
+size = Vector2(156.66838, 12.1322975)
 
 [node name="Enemy" type="Area2D" groups=["enemies"]]
 scale = Vector2(0.29042235, 0.2616086)
@@ -15,12 +15,12 @@ collision_layer = 4
 script = ExtResource("1_nbhyu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(13.773071, -114.67508)
-scale = Vector2(0.2527927, 0.26263797)
+position = Vector2(25.716908, -132.77225)
+scale = Vector2(0.2687178, 0.28676754)
 texture = ExtResource("2_gl05p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.86081314, -126.14264)
+position = Vector2(11.190601, -139.52141)
 scale = Vector2(1, 22.999998)
 shape = SubResource("RectangleShape2D_e3pey")
 
@@ -37,12 +37,14 @@ offset_top = 7.6450086
 offset_right = 180.95044
 offset_bottom = 71.645004
 theme_override_constants/separation = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="IntentUI" parent="." instance=ExtResource("5_gl05p")]
-offset_left = -75.75175
-offset_top = -317.26785
-offset_right = 84.24825
-offset_bottom = -253.26785
+offset_left = -61.978703
+offset_top = -347.84787
+offset_right = 98.0213
+offset_bottom = -283.84787
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

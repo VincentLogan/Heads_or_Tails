@@ -49,17 +49,17 @@ shape = SubResource("RectangleShape2D_g5y84")
 script = ExtResource("4_7ugeg")
 
 [node name="Bat2" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(765.00006, 397.00003)
-scale = Vector2(0.83037853, 0.75891304)
+position = Vector2(819, 440.00003)
+scale = Vector2(1.039365, 0.8828355)
 stats = ExtResource("8_ps2h3")
 
 [node name="Crab" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(974.0001, 391)
+position = Vector2(1017.00006, 354)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("5_jny6y")
 
 [node name="Player" parent="." instance=ExtResource("6_7umwq")]
-position = Vector2(262, 345)
+position = Vector2(258, 373)
 stats = ExtResource("7_jny6y")
 
 [node name="CardTargetSelector" parent="." instance=ExtResource("6_bc6rn")]
@@ -89,10 +89,10 @@ script = ExtResource("2_wm0o0")
 char_stats = ExtResource("7_jny6y")
 
 [node name="ToolTip" parent="BattleUI" instance=ExtResource("11_mhcl8")]
-offset_left = -194.0
-offset_top = 22.0
-offset_right = 246.0
-offset_bottom = 166.0
+offset_left = -259.0
+offset_top = 8.0
+offset_right = 313.0
+offset_bottom = 224.0
 scale = Vector2(0.8947368, 0.822695)
 
 [node name="EndTurnButton" type="Button" parent="BattleUI"]
