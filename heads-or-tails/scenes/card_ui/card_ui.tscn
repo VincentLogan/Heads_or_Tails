@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmjf3bi6bkh6x"]
+[gd_scene load_steps=13 format=3 uid="uid://cmjf3bi6bkh6x"]
 
 [ext_resource type="Theme" uid="uid://cpfc6jmkfb6ku" path="res://main_theme.tres" id="1_gy3gl"]
 [ext_resource type="Script" uid="uid://b1e4docwy6kf5" path="res://scenes/card_ui/card_ui.gd" id="2_els2s"]
 [ext_resource type="StyleBox" uid="uid://dt0o3bfn4bshp" path="res://scenes/card_ui/card_dragging_styleboxi.tres" id="3_js3ux"]
 [ext_resource type="Script" uid="uid://4yjomeu5eku6" path="res://scenes/card_ui/card_state_machine.gd" id="3_psaan"]
+[ext_resource type="Texture2D" uid="uid://dfyp4lgbc5i7a" path="res://art/attack.png" id="4_opj8w"]
 [ext_resource type="Script" uid="uid://bio5fj4nlq4r4" path="res://scenes/card_ui/card_states/card_base_state.gd" id="4_orrkt"]
 [ext_resource type="Texture2D" uid="uid://dyhml6v2ch0aw" path="res://resource/sprites/attack.jpg" id="4_qeblu"]
 [ext_resource type="Script" uid="uid://cmv2u475m87xm" path="res://scenes/card_ui/card_states/card_clicked_state.gd" id="5_yxx8x"]
@@ -12,7 +13,7 @@
 [ext_resource type="Script" uid="uid://cb65hycdl761m" path="res://scenes/card_ui/card_states/card_aiming_state.gd" id="8_yxx8x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gy3gl"]
-size = Vector2(99.66095, 118.52191)
+size = Vector2(99.16013, 120.02521)
 
 [node name="CardUI" type="Control"]
 custom_minimum_size = Vector2(100, 120)
@@ -20,10 +21,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -12.5
-offset_top = -15.0
-offset_right = -1114.5
-offset_bottom = -603.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1051.0
+offset_bottom = -527.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9983851, 0.99563336)
@@ -40,16 +41,23 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = ExtResource("3_js3ux")
 
-[node name="Cost" type="Label" parent="."]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 0
-offset_left = -5.508896
-offset_right = 40.0
-offset_bottom = 40.0
-theme_override_font_sizes/font_size = 16
-text = "2"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="card_value" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -57.99123
+offset_right = 51.163376
+offset_bottom = 60.5263
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_opj8w")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 1
@@ -58,10 +66,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -22.956327
+offset_top = -42.92544
+offset_right = 26.583298
+offset_bottom = 2.403492
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -69,12 +77,28 @@ texture = ExtResource("4_qeblu")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Cost" type="Label" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -31.890007
+offset_top = -5.021929
+offset_right = 8.109993
+offset_bottom = 34.978073
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 16
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="DropPointDetector" type="Area2D" parent="."]
 collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
-position = Vector2(49.830475, 60.260963)
+position = Vector2(51.082493, 61.267532)
 shape = SubResource("RectangleShape2D_gy3gl")
 
 [node name="CardStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
