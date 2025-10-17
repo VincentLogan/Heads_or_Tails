@@ -12,4 +12,7 @@ cost = 1
 icon = ExtResource("1_ungqh")
 tooltip_text = "[center]Deal[color=\"ff0000\"]6[/color]damage.[/center]"
 sound = ExtResource("3_6uoki")
+coin_gain = 10
+high_threshold = 55
+low_threshold = 45
 metadata/_custom_type_script = "uid://co1d38d8umks"

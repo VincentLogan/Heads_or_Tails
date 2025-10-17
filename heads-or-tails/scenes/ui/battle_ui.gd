@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var hand: Hand = $Hand as Hand
 @onready var mana_ui: ManaUI = $ManaUI as ManaUI
 @onready var end_turn_button: Button = %EndTurnButton
+@onready var luck_ui: LuckUI = $LuckycoinUI as LuckUI
 
 func _ready() -> void:
 	Events.player_hand_drawn.connect(_on_player_hand_drawn)
@@ -15,6 +16,7 @@ func _set_char_stats(value: CharacterStats) -> void:
 	char_stats = value
 	mana_ui.char_stats = char_stats
 	hand.char_stats = char_stats
+	luck_ui.char_stats = char_stats
 
 func _on_player_hand_drawn() -> void:
 	end_turn_button.disabled = false

@@ -14,6 +14,14 @@ enum Target{SELF, SINGLE_ENENMY, ALL_ENEMIES, EVERYONE}
 @export_multiline var tooltip_text: String
 @export var sound: AudioStream
 
+@export var coin_gain: int = 0 #幸运币增加
+@export var high_threshold = 4 #高阈值
+@export var low_threshold = -3 #低阈值
+
+@export var normal_effects: Array = []
+@export var high_luck_effects: Array = []
+@export var low_luck_effects: Array = []
+
 func is_single_targeted() -> bool:
 	return target == Target.SINGLE_ENENMY
 
@@ -38,10 +46,17 @@ func play(targets: Array[Node], char_stats: CharacterStats) -> void:
 	char_stats.mana -= cost
 	
 	if is_single_targeted():
-		apply_effects(targets)
+		apply_effects(targets, char_stats)
 	else:
-		apply_effects(_get_targets(targets))
-		
-func apply_effects(_targets: Array[Node]) -> void:
+		apply_effects(_get_targets(targets), char_stats)
+	
+	#使用后改变幸运币
+	if coin_gain != 0:
+		if "add_luck" in char_stats:
+			char_stats.add_luck(coin_gain)
+		else:
+			char_stats.luck += coin_gain
+	
+func apply_effects(_targets: Array[Node],_char_stats: CharacterStats) -> void:
 	pass
 	
