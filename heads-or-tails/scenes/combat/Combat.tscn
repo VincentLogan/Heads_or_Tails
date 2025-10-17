@@ -49,22 +49,22 @@ shape = SubResource("RectangleShape2D_g5y84")
 script = ExtResource("4_7ugeg")
 
 [node name="Bat2" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(1058.0001, 369)
+position = Vector2(1060, 390)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("8_ps2h3")
 
 [node name="Crab" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(881.00006, 425.00003)
+position = Vector2(877.0001, 468)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("5_jny6y")
 
 [node name="Bat1" parent="EnemyHandle" instance=ExtResource("2_x5flq")]
-position = Vector2(707.00006, 382)
+position = Vector2(713.00006, 392)
 scale = Vector2(0.83037853, 0.75891304)
 stats = ExtResource("8_ps2h3")
 
 [node name="Player" parent="." instance=ExtResource("6_7umwq")]
-position = Vector2(295, 332)
+position = Vector2(300, 372)
 stats = ExtResource("7_jny6y")
 
 [node name="CardTargetSelector" parent="." instance=ExtResource("6_bc6rn")]
@@ -82,10 +82,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -213.0
-offset_top = -121.0
-offset_right = 320.0
-offset_bottom = -1.0
+offset_left = -258.0
+offset_top = -120.0
+offset_right = 258.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("2_wm0o0")
