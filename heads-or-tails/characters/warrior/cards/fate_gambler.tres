@@ -1,7 +1,8 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d0cbddgg2qbtp"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://d0cbddgg2qbtp"]
 
 [ext_resource type="Texture2D" uid="uid://p7qy8ewtejr8" path="res://art/fate_gambler.png" id="1_2q6wn"]
 [ext_resource type="Script" uid="uid://dqlmkqwbv6jle" path="res://characters/warrior/cards/fate_gambler.gd" id="2_s3lgm"]
+[ext_resource type="AudioStream" uid="uid://dixklg6g4jnsq" path="res://art/art/slash.ogg" id="3_s3lgm"]
 
 [resource]
 script = ExtResource("2_s3lgm")
@@ -12,5 +13,6 @@ tooltip_text = "在接下来的一回合内：
 出牌不消耗幸运币能量
 且一定触发强运状态，
 在下个回合幸运币能量降低25%"
+sound = ExtResource("3_s3lgm")
 coin_gain = -25
 metadata/_custom_type_script = "uid://co1d38d8umks"
