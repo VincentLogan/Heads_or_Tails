@@ -17,4 +17,7 @@ func _set_char_stats(value: CharacterStats) -> void:
 	_on_stats_changed()
 	
 func _on_stats_changed() -> void:
-	luck_label.text = "%s" % [char_stats.luck_coins]
+	if char_stats.luck_coins > 5000:
+		luck_label.text = "%s" % [char_stats.luck_coins - 10000]
+	else:
+		luck_label.text = "%s" % [char_stats.luck_coins]

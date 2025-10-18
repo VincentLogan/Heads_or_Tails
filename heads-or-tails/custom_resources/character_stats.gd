@@ -12,7 +12,9 @@ var deck: CardPile
 var discard: CardPile
 var draw_pile: CardPile
 var luck_coins: int = 50 #幸运
-
+var luck_locked: bool = false
+var can_effect_true: bool = false
+var prime_luck_coins: int = 0
 
 func set_mana(value: int) -> void:
 	mana = value
@@ -28,9 +30,9 @@ func take_damage(damage : int) -> void:
 		Events.player_hit.emit()
 
 func add_luck(amount: int) -> void:
-	#注意：如果你想在tier变化时发信号，可以在这里记录旧tier
-	luck_coins += amount
-	emit_signal("stats_changed")
+	if not luck_locked:#注意：如果你想在tier变化时发信号，可以在这里记录旧tier
+		luck_coins += amount
+		emit_signal("stats_changed")
 	#举例发tier变化（需要量子值时调用者自行处理）
 
 func get_luck():#获取当前幸运币
@@ -55,3 +57,6 @@ func create_instance() -> Resource:
 	instance.draw_pile = CardPile.new()
 	instance.discard = CardPile.new()
 	return instance
+
+func _unlock_luck():
+	luck_locked = false
