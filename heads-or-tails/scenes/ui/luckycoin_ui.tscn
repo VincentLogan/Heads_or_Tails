@@ -14,6 +14,7 @@ scale = Vector2(5.7499995, 5.5000005)
 texture = ExtResource("1_32qc5")
 
 [node name="LuckycoinLabel" type="Label" parent="."]
+modulate = Color(1, 0.23137255, 0, 1)
 layout_mode = 0
 offset_right = 131.0
 offset_bottom = 121.0
