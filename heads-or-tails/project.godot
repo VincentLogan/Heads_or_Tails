@@ -24,6 +24,7 @@ SfxPlayer="*res://global/sfx_player.tscn"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [global_group]
