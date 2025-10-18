@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bksdy548xo3h3"]
+
+[ext_resource type="Texture2D" uid="uid://btctq2xf7mehn" path="res://art/shield_charge.png" id="1_4g1b4"]
+[ext_resource type="Script" uid="uid://d14hetyo0mdjy" path="res://characters/warrior/cards/shield_charge.gd" id="2_4vo7f"]
+
+[resource]
+script = ExtResource("2_4vo7f")
+id = "shield_charge"
+type = 2
+target = 1
+cost = 2
+icon = ExtResource("1_4g1b4")
+tooltip_text = "获得8点格挡，并对一名敌人造成6点伤害
+
+强运：+20%概率格挡和伤害数值均+4
+幸运：+20%概率格挡和伤害数值均+2
+不幸：+20%概率格挡和伤害数值均-2
+厄运：+20%概率格挡和伤害数值均-4"
+metadata/_custom_type_script = "uid://co1d38d8umks"

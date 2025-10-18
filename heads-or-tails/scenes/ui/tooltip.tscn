@@ -1,19 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://ylbr2bfq6mq3"]
+[gd_scene load_steps=5 format=3 uid="uid://ylbr2bfq6mq3"]
 
 [ext_resource type="Script" uid="uid://77lj5giux33r" path="res://scenes/ui/tooltip.gd" id="1_b5j4s"]
 [ext_resource type="Theme" uid="uid://cpfc6jmkfb6ku" path="res://main_theme.tres" id="1_kv0sd"]
 [ext_resource type="Texture2D" uid="uid://6lxeyfik2hly" path="res://art/tile_0119.png" id="1_mtwet"]
+[ext_resource type="Texture2D" uid="uid://ckej6ntmt7276" path="res://art/card_tooltip.jpg" id="3_o3msy"]
 
 [node name="ToolTip" type="PanelContainer"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -220.0
-offset_right = 220.0
-offset_bottom = 144.0
+offset_right = 352.0
+offset_bottom = 216.0
 grow_horizontal = 2
 theme = ExtResource("1_kv0sd")
 script = ExtResource("1_b5j4s")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("3_o3msy")
+expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2

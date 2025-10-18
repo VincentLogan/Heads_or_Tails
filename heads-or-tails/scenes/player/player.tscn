@@ -8,8 +8,8 @@
 script = ExtResource("1_gmlin")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.0000005, -65)
-scale = Vector2(0.3153333, 0.26666668)
+position = Vector2(1, -60)
+scale = Vector2(0.2615, 0.23966667)
 texture = ExtResource("2_lvxji")
 
 [node name="StatsUI" parent="." instance=ExtResource("2_gmlin")]

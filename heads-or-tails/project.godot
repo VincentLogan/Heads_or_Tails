@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Heads_or_Tails"
-run/main_scene="uid://cmjf3bi6bkh6x"
+run/main_scene="uid://dik2m7g077hhm"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
