@@ -1,7 +1,28 @@
 extends Card
 
-func apply_effects(_targets: Array[Node], _char_stats: CharacterStats) -> void:
+
+func apply_effects(targets: Array[Node], char_stats: CharacterStats) -> void:
 	var damage_effect := DamageEffect.new()
-	damage_effect.amount = 4
+	var luck_effect := LuckEffect.new()
+	var luck_coins = char_stats.luck_coins
+	luck_effect.amount = coin_gain
+	
+	if luck_coins > 5000:
+		damage_effect.amount = 6
+	elif not can_effect():
+		damage_effect.amount = 4
+		luck_effect.amount = -8
+	else:
+		if luck_coins < 25:
+			damage_effect.amount = 2
+		elif luck_coins >= 25 and luck_coins < 50:
+			damage_effect.amount = 3
+		elif luck_coins >= 50 and luck_coins < 75:
+			damage_effect.amount = 5
+		elif luck_coins >= 75:
+			damage_effect.amount = 6
+
+	
 	damage_effect.sound = sound
-	damage_effect.execute(_targets)
+	damage_effect.execute(targets)
+	luck_effect.execute(targets)

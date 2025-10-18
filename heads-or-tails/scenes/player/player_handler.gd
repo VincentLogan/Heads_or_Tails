@@ -7,6 +7,7 @@ const HAND_DISCARD_INTERVAL := 0.25
 @export var hand: Hand
 
 var character: CharacterStats
+var card: Card
 
 func _ready() -> void:
 	Events.card_played.connect(_on_card_played)
@@ -22,6 +23,9 @@ func start_turn() -> void:
 	character.block = 0
 	character.reset_mana()
 	draw_cards(character.cards_per_turn)
+	character.luck_locked = false
+	if character.luck_coins > 100:
+		character.luck_coins -= 10000
 	
 func end_turn() -> void:
 	hand.disable_hand()

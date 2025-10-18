@@ -12,4 +12,5 @@ tooltip_text = "在接下来的一回合内：
 出牌不消耗幸运币能量
 且一定触发强运状态，
 在下个回合幸运币能量降低25%"
+coin_gain = -25
 metadata/_custom_type_script = "uid://co1d38d8umks"

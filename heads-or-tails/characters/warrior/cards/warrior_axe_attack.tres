@@ -16,7 +16,8 @@ tooltip_text = "对选中敌人造成7点伤害
 不幸：+20%概率造成5点伤害
 厄运：+20%概率造成3点伤害"
 sound = ExtResource("3_6uoki")
-coin_gain = 36
+coin_gain = -5
 high_threshold = 55
 low_threshold = 45
+p = 0.2
 metadata/_custom_type_script = "uid://co1d38d8umks"

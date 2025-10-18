@@ -22,6 +22,8 @@ enum Target{SELF, SINGLE_ENENMY, ALL_ENEMIES, EVERYONE}
 @export var high_luck_effects: Array = []
 @export var low_luck_effects: Array = []
 
+@export var p: float = 0.0
+
 func is_single_targeted() -> bool:
 	return target == Target.SINGLE_ENENMY
 
@@ -60,7 +62,7 @@ func play(targets: Array[Node], char_stats: CharacterStats) -> void:
 func apply_effects(_targets: Array[Node],_char_stats: CharacterStats) -> void:
 	pass
 	
-func can_effect(p: float) -> bool:
+func can_effect() -> bool:
 	var n = randf()
 	if n <= p:
 		return true

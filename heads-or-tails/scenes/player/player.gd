@@ -47,3 +47,9 @@ func take_damage(damage: int) -> void:
 				Events.player_died.emit()
 				queue_free()
 	)
+
+func add_luck(amount: int) -> void:
+	#注意：如果你想在tier变化时发信号，可以在这里记录旧tier
+	stats.luck_coins += amount
+	emit_signal("stats_changed")
+	#举例发tier变化（需要量子值时调用者自行处理）

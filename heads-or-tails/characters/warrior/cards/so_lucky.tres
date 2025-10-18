@@ -10,4 +10,5 @@ type = 2
 cost = 1
 icon = ExtResource("1_bq70n")
 tooltip_text = "获得20%幸运币能量"
+coin_gain = 20
 metadata/_custom_type_script = "uid://co1d38d8umks"
