@@ -1,6 +1,8 @@
 class_name CharacterStats
 extends Stats
 
+enum {v_low_luck, low_luck, high_luck, v_high_luck}
+
 @export var starting_deck: CardPile #起始牌堆
 @export var cards_per_turn: int #每回合牌数
 @export var max_mana: int #最大行动值
@@ -31,8 +33,15 @@ func add_luck(amount: int) -> void:
 	emit_signal("stats_changed")
 	#举例发tier变化（需要量子值时调用者自行处理）
 
-func get_luck() -> int:#获取当前幸运币
-	return luck_coins
+func get_luck():#获取当前幸运币
+	if luck_coins < 25:
+		return v_low_luck
+	elif luck_coins >= 25 and luck_coins < 50:
+		return low_luck
+	elif luck_coins >= 50 and luck_coins < 75:
+		return high_luck
+	elif luck_coins >= 75 and luck_coins < 100:
+		return v_high_luck
 
 func can_play_card(card: Card) -> bool:
 	return mana >= card.cost #应该是个bool值

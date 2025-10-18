@@ -60,3 +60,9 @@ func play(targets: Array[Node], char_stats: CharacterStats) -> void:
 func apply_effects(_targets: Array[Node],_char_stats: CharacterStats) -> void:
 	pass
 	
+func can_effect(p: float) -> bool:
+	var n = randf()
+	if n <= p:
+		return true
+	else:
+		return false
