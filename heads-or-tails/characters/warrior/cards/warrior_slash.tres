@@ -17,5 +17,5 @@ tooltip_text = "对所有敌人造成7点伤害，幸运币能量降低8%
 厄运：+20%概率造成2点伤害"
 sound = ExtResource("3_xnxb8")
 coin_gain = -8
-p = 0.2
+p = 0.4
 metadata/_custom_type_script = "uid://co1d38d8umks"

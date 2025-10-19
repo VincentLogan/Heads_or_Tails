@@ -19,5 +19,5 @@ sound = ExtResource("3_6uoki")
 coin_gain = -5
 high_threshold = 55
 low_threshold = 45
-p = 0.2
+p = 0.4
 metadata/_custom_type_script = "uid://co1d38d8umks"

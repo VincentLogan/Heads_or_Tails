@@ -16,6 +16,6 @@ tooltip_text = "获得7点格挡，幸运币能量降低5%
 不幸：+20%概率获得5点格挡
 厄运：+20%概率获得3点格挡"
 sound = ExtResource("3_1eir7")
-coin_gain = -3
-p = 0.2
+coin_gain = -5
+p = 0.4
 metadata/_custom_type_script = "uid://co1d38d8umks"

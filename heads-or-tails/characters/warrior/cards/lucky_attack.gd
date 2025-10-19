@@ -2,6 +2,18 @@ extends Card
 
 @export var optional_sound: AudioStream
 
-func apply_effects(_targets: Array[Node], char_stats: CharacterStats) -> void:
-	print("My awesome card has been played!")
-	print("Targets: %s" % _targets)
+func apply_effects(targets: Array[Node], char_stats: CharacterStats) -> void:
+	var damage_effect := DamageEffect.new()
+	var luck_effect := LuckEffect.new()
+	var luck_coins = char_stats.luck_coins
+	luck_effect.amount = coin_gain
+	if luck_coins <= 50:
+		damage_effect.amount = 7
+	else:
+		var damage_effect_amount = luck_coins - 50
+		damage_effect.amount = damage_effect_amount
+		luck_coins = 50
+		GlobalSignals.card_effect_triggered.emit("so_lucky")
+		
+	damage_effect.sound = sound
+	damage_effect.execute(targets)
