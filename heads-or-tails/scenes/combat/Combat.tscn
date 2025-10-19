@@ -19,14 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://te1ri0jo51fy" path="res://scenes/ui/luckycoin_ui.tscn" id="15_e3pey"]
 [ext_resource type="Script" uid="uid://brdvmtks2ufs8" path="res://scenes/ui/red_flash.gd" id="16_e3pey"]
 [ext_resource type="PackedScene" uid="uid://ck8ddba8rgn6d" path="res://scenes/ui/battle_over_panel.tscn" id="18_ffkp0"]
-[ext_resource type="Texture2D" uid="uid://css3q0wnwu4tv" path="res://art/gold.png" id="20_o2vnb"]
+[ext_resource type="Texture2D" uid="uid://bulomdab8nov7" path="res://art/币-强运.png" id="20_ws8ys"]
 [ext_resource type="Script" uid="uid://ccu0scmvy8lp2" path="res://scenes/combat/effect_display.gd" id="21_xp4ri"]
-[ext_resource type="Texture2D" uid="uid://3qeojwhvlypk" path="res://art/arrow.png" id="22_xp4ri"]
+[ext_resource type="Texture2D" uid="uid://c13k4l8a7t1qe" path="res://art/币-幸运.png" id="22_04hce"]
 [ext_resource type="Script" uid="uid://bg4muhb7lgs01" path="res://scenes/combat/display_lucky.gd" id="23_iuuvw"]
 [ext_resource type="Script" uid="uid://blw2d1shyagn6" path="res://scenes/combat/display_unlucky.gd" id="24_co5u5"]
-[ext_resource type="Texture2D" uid="uid://bb3rcs5nqntir" path="res://art/art/arrow.png" id="24_ws8ys"]
+[ext_resource type="Texture2D" uid="uid://eecaeiuf715w" path="res://art/币-不幸.png" id="24_eeyue"]
 [ext_resource type="Script" uid="uid://bcj8me7gnndbq" path="res://scenes/combat/display_so_unlucky.gd" id="25_m5o0j"]
-[ext_resource type="Texture2D" uid="uid://bcfmgrgr8oyh7" path="res://art/heartpng.png" id="26_04hce"]
+[ext_resource type="Texture2D" uid="uid://dj3xm7n6c51cq" path="res://art/币-厄运.png" id="26_bosqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5y84"]
 size = Vector2(1138.6208, 433.9816)
@@ -172,7 +172,7 @@ offset_right = 48.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("20_o2vnb")
+texture = ExtResource("20_ws8ys")
 script = ExtResource("21_xp4ri")
 
 [node name="Display_lucky" type="TextureRect" parent="CanvasLayer"]
@@ -188,7 +188,7 @@ offset_right = 48.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_xp4ri")
+texture = ExtResource("22_04hce")
 script = ExtResource("23_iuuvw")
 
 [node name="Display_unlucky" type="TextureRect" parent="CanvasLayer"]
@@ -204,7 +204,7 @@ offset_right = 48.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_ws8ys")
+texture = ExtResource("24_eeyue")
 script = ExtResource("24_co5u5")
 
 [node name="Display_so_unlucky" type="TextureRect" parent="CanvasLayer"]
@@ -220,5 +220,5 @@ offset_right = 48.0
 offset_bottom = 46.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("26_04hce")
+texture = ExtResource("26_bosqy")
 script = ExtResource("25_m5o0j")
