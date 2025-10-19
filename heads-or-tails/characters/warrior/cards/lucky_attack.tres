@@ -10,6 +10,8 @@ id = "lucky_attack"
 target = 1
 cost = 2
 icon = ExtResource("1_4eblc")
-tooltip_text = "将超出50%的幸运币能量转换成伤害打出"
+tooltip_text = "转化20%幸运币能量为伤害打出
+低于50%，造成7点伤害
+多于50%的能量，每多2%，加一点伤害(向下取整)"
 sound = ExtResource("3_58lm2")
 metadata/_custom_type_script = "uid://co1d38d8umks"

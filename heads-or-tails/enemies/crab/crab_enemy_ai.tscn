@@ -13,7 +13,7 @@
 
 [sub_resource type="Resource" id="Resource_0pxcg"]
 script = ExtResource("4_trgox")
-number = "7"
+number = "5"
 icon = ExtResource("3_moca1")
 metadata/_custom_type_script = "uid://cljvl4jdx1ejm"
 

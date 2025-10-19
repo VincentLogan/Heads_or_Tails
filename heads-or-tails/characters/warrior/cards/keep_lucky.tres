@@ -10,6 +10,6 @@ id = "keep_lucky"
 type = 2
 cost = 1
 icon = ExtResource("1_13elt")
-tooltip_text = "在接下来的一回合内幸运币能量不变"
+tooltip_text = "打出后此回合内幸运币能量不变"
 sound = ExtResource("3_atb8u")
 metadata/_custom_type_script = "uid://co1d38d8umks"

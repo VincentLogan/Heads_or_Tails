@@ -10,12 +10,12 @@ id = "warrior_block"
 type = 1
 cost = 1
 icon = ExtResource("1_1eir7")
-tooltip_text = "获得7点格挡，幸运币能量降低5%
-强运：+20%概率获得11点格挡
+tooltip_text = "获得7点格挡，幸运币能量降低3%
+强运：+40概率获得11点格挡
 幸运：+20%概率获得9点格挡
-不幸：+20%概率获得5点格挡
-厄运：+20%概率获得3点格挡"
+不幸：+40%概率获得5点格挡
+厄运：+40%概率获得3点格挡"
 sound = ExtResource("3_1eir7")
-coin_gain = -5
+coin_gain = -3
 p = 0.4
 metadata/_custom_type_script = "uid://co1d38d8umks"
