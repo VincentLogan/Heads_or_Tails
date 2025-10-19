@@ -7,8 +7,9 @@ func apply_effects(targets: Array[Node], char_stats: CharacterStats) -> void:
 	var luck_coins = char_stats.luck_coins
 	luck_effect.amount = coin_gain
 
-	if luck_coins > 5000:
+	if char_stats.super_luck_mode:
 		block_effect.amount = 11
+		GlobalSignals.card_effect_triggered.emit("so_lucky")
 	elif not can_effect():
 		block_effect.amount = 7
 	else:

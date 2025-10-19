@@ -24,8 +24,8 @@ func start_turn() -> void:
 	character.reset_mana()
 	draw_cards(character.cards_per_turn)
 	character.luck_locked = false
-	if character.luck_coins > 100:
-		character.luck_coins -= 10000
+	character.luck_down_locked = false
+	character.super_luck_mode = false
 	
 func end_turn() -> void:
 	hand.disable_hand()
@@ -47,6 +47,10 @@ func draw_cards(amount: int) -> void:
 	)
 
 func discard_cards() -> void:
+	if hand.get_child_count() == 0: #手牌为空的时候也结束回合
+		Events.player_hand_discarded.emit()
+		return
+	
 	var tween := create_tween()
 	for card_ui in hand.get_children():
 		tween.tween_callback(character.discard.add_card.bind(card_ui.card))

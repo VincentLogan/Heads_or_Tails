@@ -11,10 +11,18 @@ var mana: int : set = set_mana
 var deck: CardPile
 var discard: CardPile
 var draw_pile: CardPile
-var luck_coins: int = 50 #幸运
+var luck_coins: int = 50 : set = set_luck #幸运
+var LUCK_MIN := 0
+var LUCK_MAX := 100
 var luck_locked: bool = false
 var can_effect_true: bool = false
 var prime_luck_coins: int = 0
+var super_luck_mode := false
+var luck_down_locked := false
+
+func set_luck(value: int) -> void:
+	luck_coins = clamp(value, LUCK_MIN, LUCK_MAX)
+	stats_changed.emit()
 
 func set_mana(value: int) -> void:
 	mana = value
@@ -31,7 +39,13 @@ func take_damage(damage : int) -> void:
 
 func add_luck(amount: int) -> void:
 	if not luck_locked:#注意：如果你想在tier变化时发信号，可以在这里记录旧tier
-		luck_coins += amount
+		if luck_down_locked:
+			if amount < 0:
+				return 
+			else:
+				set_luck(luck_coins + amount)
+		else:
+			set_luck(luck_coins + amount)
 		emit_signal("stats_changed")
 	#举例发tier变化（需要量子值时调用者自行处理）
 
