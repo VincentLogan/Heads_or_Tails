@@ -1,5 +1,5 @@
 extends Node2D
-
+signal card_effect_triggered(effected_type)
 
 @export var char_stats: CharacterStats
 @export var music: AudioStream
@@ -9,6 +9,7 @@ extends Node2D
 @onready var player: Player = $Player
 
 func _ready() -> void:
+	card_effect_triggered.connect(_on_effect_triggered)
 	# Normally, we would do this on a 'Run'
 	# level so we keep our health, gold and deck
 	# between battles.
@@ -41,3 +42,8 @@ func _on_enemy_turn_ended() -> void:
 
 func _on_player_died() -> void:
 		Events.battle_over_screen_requested.emit("Game Over!", BattleOverPanel.Type.LOSE)
+		
+func _on_effect_triggered(effect_type):
+	# 这里处理特效显示，确保调用者是持久存在的节点
+	var effect_display = $UI/EffectDisplay
+	effect_display.show_effect()

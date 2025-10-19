@@ -15,12 +15,16 @@ func apply_effects(targets: Array[Node], char_stats: CharacterStats) -> void:
 	else:
 		if luck_coins < 25:
 			damage_effect.amount = 2
+			GlobalSignals.card_effect_triggered.emit("so_unlucky")
 		elif luck_coins >= 25 and luck_coins < 50:
 			damage_effect.amount = 3
+			GlobalSignals.card_effect_triggered.emit("unlucky")
 		elif luck_coins >= 50 and luck_coins < 75:
 			damage_effect.amount = 5
+			GlobalSignals.card_effect_triggered.emit("lucky")
 		elif luck_coins >= 75:
 			damage_effect.amount = 6
+			GlobalSignals.card_effect_triggered.emit("so_lucky")
 
 	
 	damage_effect.sound = sound
