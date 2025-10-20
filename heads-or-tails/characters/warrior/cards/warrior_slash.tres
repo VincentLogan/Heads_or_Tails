@@ -10,10 +10,10 @@ id = "warrior_slash"
 target = 2
 cost = 2
 icon = ExtResource("1_eofgd")
-tooltip_text = "对所有敌人造成7点伤害，幸运币能量降低8%
+tooltip_text = "对所有敌人造成4点伤害，幸运币能量降低8%
 强运：+40%概率造成6点伤害
 幸运：+40%概率造成5点伤害
-不幸：+40%概率造成4点伤害
+不幸：+40%概率造成3点伤害
 厄运：+40%概率造成2点伤害"
 sound = ExtResource("3_xnxb8")
 coin_gain = -8
