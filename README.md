@@ -47,11 +47,11 @@
   
 |幸运状态|	幸运值范围|对卡牌效果的影响|
 |:-----:|:--------:|-------------|
-|厄运<img src="https://github.com/VincentLogan/Heads_or_Tails/blob/main/heads-or-tails/art/%E5%B8%81-%E5%8E%84%E8%BF%90.png" alt="强运" width="100" style="max-width: 100%;">  |	低于 25%	|卡牌效果大幅削弱，极易触发“不幸”事件|
-|不幸<img src="https://github.com/VincentLogan/Heads_or_Tails/blob/main/heads-or-tails/art/%E5%B8%81-%E4%B8%8D%E5%B9%B8.png" alt="强运" width="100" style="max-width: 100%;"> |	25% - 50%	|卡牌效果较弱，触发“不幸”的概率较高|
+|厄运<img src="https://raw.githubusercontent.com/VincentLogan/Heads_or_Tails/main/heads-or-tails/art/%E5%B8%81-%E5%8E%84%E8%BF%90.png" alt="强运" width="100" style="max-width: 100%;">  |	低于 25%	|卡牌效果大幅削弱，极易触发“不幸”事件|
+|不幸<img src="https://raw.githubusercontent.com/VincentLogan/Heads_or_Tails/main/heads-or-tails/art/%E5%B8%81-%E4%B8%8D%E5%B9%B8.png" alt="强运" width="100" style="max-width: 100%;"> |	25% - 50%	|卡牌效果较弱，触发“不幸”的概率较高|
 |普通|	50%	|卡牌发挥标准效果，概率分布均衡|
-|幸运<img src="https://github.com/VincentLogan/Heads_or_Tails/blob/main/heads-or-tails/art/%E5%B8%81-%E5%B9%B8%E8%BF%90.png" alt="强运" width="100" style="max-width: 100%;"> |50% - 75%	|卡牌效果增强，触发“幸运”的概率提升|
-|强运<img src="https://github.com/VincentLogan/Heads_or_Tails/blob/main/heads-or-tails/art/%E5%B8%81-%E5%BC%BA%E8%BF%90.png" alt="强运" width="100" style="max-width: 100%;"> |	超过 75%	|卡牌效果极强，高概率触发“幸运”事件|
+|幸运<img src="https://raw.githubusercontent.com/VincentLogan/Heads_or_Tails/main/heads-or-tails/art/%E5%B8%81-%E5%B9%B8%E8%BF%90.png" alt="强运" width="100" style="max-width: 100%;"> |50% - 75%	|卡牌效果增强，触发“幸运”的概率提升|
+|强运<img src="https://raw.githubusercontent.com/VincentLogan/Heads_or_Tails/main/heads-or-tails/art/%E5%B8%81-%E5%BC%BA%E8%BF%90.png" alt="强运" width="100" style="max-width: 100%;"> |	超过 75%	|卡牌效果极强，高概率触发“幸运”事件|
 
 ## 游玩说明
 1. demo仅有一场战斗，用于展示游戏核心机制
